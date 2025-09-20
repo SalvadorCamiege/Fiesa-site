@@ -1,6 +1,4 @@
-// Esperar que o DOM esteja completamente carregado
 document.addEventListener('DOMContentLoaded', function() {
-    // Menu móvel
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mainNav = document.getElementById('mainNav');
     const navList = mainNav.querySelector('ul');
@@ -11,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Fechar menu ao clicar em um link
     const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -21,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Header scroll effect
     const header = document.querySelector('header');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
@@ -104,7 +100,6 @@ if (form) {
     window.addEventListener('scroll', animateCounters);
     animateCounters();
 
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -122,7 +117,6 @@ if (form) {
         });
     });
 
-    // Active nav item
     const sections = document.querySelectorAll('section');
     const navItems = document.querySelectorAll('nav ul li a');
     
@@ -144,7 +138,6 @@ if (form) {
     }
     window.addEventListener('scroll', setActiveNavItem);
 
-    // Atividades programa
     const programItems = document.querySelectorAll('.atividade');
     programItems.forEach(item => {
         item.style.opacity = '0';
